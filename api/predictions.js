@@ -1,4 +1,4 @@
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
     try {
         const response = await fetch("https://www.gag2.gg/api/stock/predictions");
         const data = await response.json();
@@ -23,4 +23,4 @@ export default async function handler(req, res) {
     } catch (error) {
         res.status(500).json({ error: "Erreur proxy", details: error.toString() });
     }
-}
+};
