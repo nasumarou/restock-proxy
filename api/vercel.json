@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/predictions.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/predictions", "dest": "/api/predictions.js" }
+  ]
+}
